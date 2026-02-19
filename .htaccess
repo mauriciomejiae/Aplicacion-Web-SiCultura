@@ -1,5 +1,21 @@
+# ==============================================
+# .htaccess — SiCultura v2.0
+# ==============================================
+# Configuración de Apache para la aplicación web.
+# ==============================================
+
+# ----------------------------------------------
+# 1. SEGURIDAD: Deshabilitar listado de directorios
+#    Evita que se puedan navegar carpetas del servidor
+#    directamente desde el navegador.
+# ----------------------------------------------
 Options All -Indexes
 
+# ----------------------------------------------
+# 2. URLs AMIGABLES
+#    Convierte URLs como /lenguas, /activos, /inicio
+#    en index.php?ruta=lenguas, index.php?ruta=activos, etc.
+#    Solo permite letras, números y guiones en la ruta.
+# ----------------------------------------------
 RewriteEngine On
-
 RewriteRule ^([-a-zA-Z0-9]+)$ index.php?ruta=$1

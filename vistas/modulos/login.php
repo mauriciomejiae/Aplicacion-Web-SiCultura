@@ -1,54 +1,46 @@
 <div id="back"></div>
 
-<div class="login-box left">
-
+<div class="login-box">
   <div class="login-logo">
+    <a href="#"><b>SiCultura</b></a>
+  </div>
+  <!-- /.login-logo -->
+  <div class="card">
+    <div class="card-body login-card-body">
+      <p class="login-box-msg">Ingresar al sistema</p>
 
-    <a> <i class="fa fa-flag-o" aria-hidden="true"></i>  | Sistema de información de la <b>Cultura</b></a>
-
-   </div>
-
-  <div class="login-box-body">
-
-    <p class="login-box-msg">Ingresar al sistema</p>
-
-    <form method="post">  
-
-      <div class="form-group has-feedback">
-
-        <input type="text" class="form-control" placeholder="Usuario" name="ingUsuario" required>
-        <span class="glyphicon glyphicon-user form-control-feedback"></span>
-
-      </div>
-
-      <div class="form-group has-feedback">
-
-        <input type="password" class="form-control" placeholder="Contraseña" name="ingPassword" required>
-        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-      
-      </div>
-
-      <div class="row">
-       
-        <div class="col-lg-4 col-xs-6">
-
-          <button type="submit" class="btn btn-success btn-block btn-flat"><i class="fa fa-sign-in"></i> Ingresar</button>
-    
+      <form method="post">
+        
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Usuario" name="ingUsuario" required>
+          <div class="input-group-text">
+            <span class="fas fa-user"></span>
+          </div>
         </div>
 
-      </div>
+        <div class="input-group mb-3">
+          <input type="password" class="form-control" placeholder="Contraseña" name="ingPassword" required>
+          <div class="input-group-text">
+            <span class="fas fa-lock"></span>
+          </div>
+        </div>
 
-      <?php
+        <div class="row">
+          <div class="col-12">
+            <button type="submit" class="btn btn-primary w-100">Ingresar</button>
+          </div>
+          <!-- /.col -->
+        </div>
 
-        $login = new ControladorUsuarios();
-        $login -> ctrIngresoUsuario();
-        
-      ?>
+        <?php
+          $login = new ControladorUsuarios();
+          $login -> ctrIngresoUsuario();
+        ?>
 
-    </form>
-
+      </form>
+    </div>
+    <!-- /.login-card-body -->
   </div>
-
 </div>
 
 

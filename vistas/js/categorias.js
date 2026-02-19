@@ -35,10 +35,10 @@ $(".tablas").on("click", ".btnEliminarCategoria", function(){
 
 	 var idCategoria = $(this).attr("idCategoria");
 
-	 swal({
+	 Swal.fire({
 	 	title: '¿Está seguro de borrar la categoría?',
 	 	text: "¡Si no lo está puede cancelar la acción!",
-	 	type: 'warning',
+	 	icon: 'warning',
 	 	showCancelButton: true,
 	 	confirmButtonColor: '#3085d6',
 	 	cancelButtonColor: '#d33',

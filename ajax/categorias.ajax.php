@@ -1,13 +1,17 @@
 <?php
+/**
+ * ==============================================
+ * AJAX — Editar Categoría
+ * ==============================================
+ * Devuelve datos de una categoría específica
+ * en formato JSON para el modal de edición.
+ * ==============================================
+ */
 
 require_once "../controladores/categorias.controlador.php";
 require_once "../modelos/categorias.modelo.php";
 
 class AjaxCategorias{
-
-	/*=============================================
-	EDITAR CATEGORIA
-	=============================================*/	
 
 	public $idCategoria;
 
@@ -18,17 +22,14 @@ class AjaxCategorias{
 
 		$respuesta = ControladorCategorias::ctrMostrarCategorias($item, $valor);
 
-		echo json_encode($respuesta);
-
+		header('Content-Type: application/json; charset=utf-8');
+		echo json_encode($respuesta, JSON_UNESCAPED_UNICODE);
 	}
 }
 
-/*=============================================
-EDITAR CATEGORIA
-=============================================*/	
 if(isset($_POST["idCategoria"])){
 
 	$categoria = new AjaxCategorias();
-	$categoria -> idCategoria = $_POST["idCategoria"];
-	$categoria -> ajaxEditarCategoria();
+	$categoria->idCategoria = $_POST["idCategoria"];
+	$categoria->ajaxEditarCategoria();
 }

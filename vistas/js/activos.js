@@ -23,7 +23,9 @@ $('.tablaActivos').DataTable( {
     "deferRender": true,
 	"retrieve": true,
 	"processing": true,
-	 "language": {
+    "pageLength": 5,
+    "lengthMenu": [[5, 10, 25, 50, -1], [5, 10, 25, 50, "Todos"]],
+	"language": {
 
 			"sProcessing":     "Procesando...",
 			"sLengthMenu":     "Mostrar _MENU_ registros",
@@ -142,11 +144,11 @@ $(".tablaActivos tbody").on("click", "button.btnEliminarActivo", function(){
 	var idActivo = $(this).attr("idActivo");
 	var id_activo = $(this).attr("id_activo");
 
-	swal({
+	Swal.fire({
 
 		title: '¿Está seguro de eliminar el activo?',
 		text: "¡Si no lo está puede cancelar la accíón!",
-		type: 'warning',
+		icon: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',

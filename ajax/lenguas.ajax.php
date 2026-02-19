@@ -1,13 +1,17 @@
 <?php
+/**
+ * ==============================================
+ * AJAX — Editar Lengua
+ * ==============================================
+ * Devuelve datos de una lengua específica
+ * en formato JSON para el modal de edición.
+ * ==============================================
+ */
 
 require_once "../controladores/lenguas.controlador.php";
 require_once "../modelos/lenguas.modelo.php";
 
 class AjaxLenguas{
-
-	/*=============================================
-	EDITAR LENGUA
-	=============================================*/	
 
 	public $idLengua;
 
@@ -18,21 +22,14 @@ class AjaxLenguas{
 
 		$respuesta = ControladorLenguas::ctrMostrarLenguas($item, $valor);
 
-		echo json_encode($respuesta);
-
-
+		header('Content-Type: application/json; charset=utf-8');
+		echo json_encode($respuesta, JSON_UNESCAPED_UNICODE);
 	}
-
 }
-
-/*=============================================
-EDITAR LENGUA
-=============================================*/	
 
 if(isset($_POST["idLengua"])){
 
 	$lengua = new AjaxLenguas();
-	$lengua -> idLengua = $_POST["idLengua"];
-	$lengua -> ajaxEditarLengua();
-
+	$lengua->idLengua = $_POST["idLengua"];
+	$lengua->ajaxEditarLengua();
 }

@@ -1,4 +1,12 @@
 <?php
+/**
+ * ==============================================
+ * Controlador de Lenguas Nativas
+ * ==============================================
+ * CRUD y estadísticas de lenguas indígenas.
+ * Métodos estáticos para integración con vistas.
+ * ==============================================
+ */
 
 class ControladorLenguas{
 
@@ -207,7 +215,7 @@ class ControladorLenguas{
 	SUMA TOTAL DE HABITANTES
 	=============================================*/
 
-	public function ctrSumaTotalHabitantes(){
+	static public function ctrSumaTotalHabitantes(){
 
 		$tabla = "lenguas";
 
@@ -222,7 +230,7 @@ class ControladorLenguas{
 	SUMA TOTAL DE HABLANTES
 	=============================================*/
 
-	public function ctrSumaTotalHablantes(){
+	static public function ctrSumaTotalHablantes(){
 
 		$tabla = "lenguas";
 

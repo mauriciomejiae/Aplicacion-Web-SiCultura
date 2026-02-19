@@ -23,6 +23,8 @@ $('.tablaBibliotecas').DataTable( {
     "deferRender": true,
     "retrieve": true,
     "processing": true,
+    "pageLength": 5,
+    "lengthMenu": [[5, 10, 25, 50, -1], [5, 10, 25, 50, "Todos"]],
   	"language": {
 
 			"sProcessing":     "Procesando...",
@@ -121,11 +123,11 @@ $(".tablaBibliotecas tbody").on("click", "button.btnEliminarBiblioteca", functio
 	var idBiblioteca = $(this).attr("idBiblioteca");
 	var codigo = $(this).attr("codigo");
 
-	swal({
+	Swal.fire({
 
 		title: '¿Está seguro de eliminar la biblioteca?',
 		text: "¡Si no lo está puede cancelar la accíón!",
-		type: 'warning',
+		icon: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',

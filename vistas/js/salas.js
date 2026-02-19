@@ -41,10 +41,10 @@ $(".tablas").on("click", ".btnEliminarSala", function(){
 
 	var idSala = $(this).attr("idSala");
 	
-	swal({
+	Swal.fire({
         title: '¿Está seguro de borrar el registro de la sala de cine?',
         text: "¡Si no lo está puede cancelar la acción!",
-        type: 'warning',
+        icon: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',

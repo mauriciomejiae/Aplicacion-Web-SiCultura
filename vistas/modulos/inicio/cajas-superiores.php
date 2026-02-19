@@ -34,15 +34,15 @@ $hablantes = ControladorLenguas::ctrSumaTotalHablantes();
 CAJA SUPERIOR CATEGORIAS
 ======================================-->
 
-<div class="col-lg-3 col-xs-12">
+<div class="col-12 col-sm-6 col-md-3">
 
-  <div class="info-box">
+  <div class="info-box shadow-sm">
 
-    <span class="info-box-icon bg-green"><i class="icon ion-ios-list-outline"></i></span>
+    <span class="info-box-icon text-bg-success shadow-sm"><i class="fas fa-list"></i></span>
 
     <div class="info-box-content">
 
-      <span class="info-box-text">Categorías de activos de información</span>
+      <span class="info-box-text">Categorías de activos</span>
 
       <span class="info-box-number"><?php echo number_format($totalCategorias); ?></span>
 
@@ -58,11 +58,11 @@ CAJA SUPERIOR CATEGORIAS
 CAJA SUPERIOR ACTIVOS
 ======================================-->
 
-<div class="col-lg-3 col-xs-12">
+<div class="col-12 col-sm-6 col-md-3">
 
-  <div class="info-box">
+  <div class="info-box shadow-sm">
 
-    <span class="info-box-icon bg-green"><i class="icon ion-android-laptop"></i></span>
+    <span class="info-box-icon text-bg-success shadow-sm"><i class="fas fa-laptop"></i></span>
 
     <div class="info-box-content">
 
@@ -82,15 +82,15 @@ CAJA SUPERIOR ACTIVOS
 CAJA SUPERIOR INDICES
 ======================================-->
 
-<div class="col-lg-3 col-xs-12">
+<div class="col-12 col-sm-6 col-md-3">
 
-  <div class="info-box">
+  <div class="info-box shadow-sm">
 
-    <span class="info-box-icon bg-green"><i class="icon ion ion-stats-bars"></i></span>
+    <span class="info-box-icon text-bg-success shadow-sm"><i class="fas fa-chart-bar"></i></span>
 
     <div class="info-box-content">
 
-      <span class="info-box-text">Índice de inf. clasificada y reservada</span>
+      <span class="info-box-text">Índice info. clasificada</span>
 
       <span class="info-box-number"><?php echo number_format($totalIndices); ?></span>
 
@@ -106,15 +106,15 @@ CAJA SUPERIOR INDICES
 CAJA SUPERIOR SALAS
 ======================================-->
 
-<div class="col-lg-3 col-xs-12">
+<div class="col-12 col-sm-6 col-md-3">
 
-  <div class="info-box">
+  <div class="info-box shadow-sm">
 
-    <span class="info-box-icon bg-blue"><i class="icon ion-ios-film-outline"></i></span>
+    <span class="info-box-icon text-bg-primary shadow-sm"><i class="fas fa-film"></i></span>
 
     <div class="info-box-content">
 
-      <span class="info-box-text">Salas de cine registradas</span>
+      <span class="info-box-text">Salas de cine</span>
 
       <span class="info-box-number"><?php echo number_format($totalSalas); ?></span>
 
@@ -131,15 +131,15 @@ CAJA SUPERIOR LENGUAS NATIVAS
 ======================================-->
 
 
-<div class="col-lg-3 col-xs-12">
+<div class="col-12 col-sm-6 col-md-3">
 
-  <div class="info-box">
+  <div class="info-box shadow-sm">
 
-    <span class="info-box-icon bg-orange"><i class="icon ion-ios-world-outline"></i></span>
+    <span class="info-box-icon text-bg-warning shadow-sm"><i class="fas fa-globe"></i></span>
 
     <div class="info-box-content">
 
-      <span class="info-box-text">Lenguas nativas de Colombia</span>
+      <span class="info-box-text">Lenguas nativas</span>
 
       <span class="info-box-number"><?php echo number_format($totalLenguas); ?></span>
 
@@ -155,15 +155,15 @@ CAJA SUPERIOR LENGUAS NATIVAS
 CAJA SUPERIOR LENGUAS NATIVAS - HABITANTES
 ======================================-->
 
-<div class="col-lg-3 col-xs-12">
+<div class="col-12 col-sm-6 col-md-3">
 
-  <div class="info-box">
+  <div class="info-box shadow-sm">
 
-    <span class="info-box-icon bg-orange"><i class="icon ion-ios-people-outline"></i></span>
+    <span class="info-box-icon text-bg-warning shadow-sm"><i class="fas fa-users"></i></span>
 
     <div class="info-box-content">
 
-      <span class="info-box-text">Total habitantes de lenguas nativas</span>
+      <span class="info-box-text">Total habitantes</span>
 
       <span class="info-box-number"><?php echo number_format($habitantes["total"]); ?></span>
 
@@ -179,15 +179,15 @@ CAJA SUPERIOR LENGUAS NATIVAS - HABITANTES
 CAJA SUPERIOR LENGUAS NATIVAS - HABLANTES
 ======================================-->
 
-<div class="col-lg-3 col-xs-12">
+<div class="col-12 col-sm-6 col-md-3">
 
-  <div class="info-box">
+  <div class="info-box shadow-sm">
 
-    <span class="info-box-icon bg-yellow"><i class=" icon ion-ios-mic-outline"></i></span>
+    <span class="info-box-icon text-bg-warning shadow-sm"><i class="fas fa-microphone"></i></span>
 
     <div class="info-box-content">
 
-      <span class="info-box-text">Total hablantes de lenguas nativas</span>
+      <span class="info-box-text">Total hablantes</span>
 
       <span class="info-box-number"><?php echo number_format($hablantes["total"]); ?></span>
 
@@ -202,15 +202,15 @@ CAJA SUPERIOR LENGUAS NATIVAS - HABLANTES
 CAJA SUPERIOR BIBLIOTECAS
 ======================================-->
 
-<div class="col-lg-3 col-xs-12">
+<div class="col-12 col-sm-6 col-md-3">
 
-  <div class="info-box">
+  <div class="info-box shadow-sm">
 
-    <span class="info-box-icon bg-blue"><i class="icon ion-ios-book-outline"></i></span>
+    <span class="info-box-icon text-bg-primary shadow-sm"><i class="fas fa-book"></i></span>
 
     <div class="info-box-content">
 
-      <span class="info-box-text">Directorio nacional de bibliotecas</span>
+      <span class="info-box-text">Bibliotecas</span>
 
       <span class="info-box-number"><?php echo number_format($totalBibliotecas); ?></span>
 

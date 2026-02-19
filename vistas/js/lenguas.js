@@ -46,10 +46,10 @@ $(".tablas").on("click", ".btnEliminarLengua", function(){
 
 	var idLengua = $(this).attr("idLengua");
 	
-	swal({
+	Swal.fire({
         title: '¿Está seguro de borrar el registro de la lengua?',
         text: "¡Si no lo está puede cancelar la acción!",
-        type: 'warning',
+        icon: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',

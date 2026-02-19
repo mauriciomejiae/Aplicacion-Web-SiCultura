@@ -23,7 +23,9 @@ $('.tablaIndices').DataTable( {
     "deferRender": true,
 	"retrieve": true,
 	"processing": true,
-	 "language": {
+    "pageLength": 5,
+    "lengthMenu": [[5, 10, 25, 50, -1], [5, 10, 25, 50, "Todos"]],
+	"language": {
 
 			"sProcessing":     "Procesando...",
 			"sLengthMenu":     "Mostrar _MENU_ registros",
@@ -145,11 +147,11 @@ $(".tablaIndices tbody").on("click", "button.btnEliminarIndice", function(){
 	var idIndice = $(this).attr("idIndice");
 	var id_indice = $(this).attr("id_indice");
 
-	swal({
+	Swal.fire({
 
 		title: '¿Está seguro de eliminar el índice de información?',
 		text: "¡Si no lo está puede cancelar la accíón!",
-		type: 'warning',
+		icon: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',

@@ -1,40 +1,35 @@
 <?php
+/**
+ * ==============================================
+ * AJAX — Editar Biblioteca
+ * ==============================================
+ * Devuelve datos de una biblioteca específica
+ * en formato JSON para el modal de edición.
+ * ==============================================
+ */
 
 require_once "../controladores/bibliotecas.controlador.php";
 require_once "../modelos/bibliotecas.modelo.php";
 
 class AjaxBibliotecas{
 
-  /*=============================================
-  EDITAR BIBLIOTECA
-  =============================================*/ 
+	public $idBiblioteca;
 
-  public $idBiblioteca;
+	public function ajaxEditarBiblioteca(){
 
-  public function ajaxEditarBiblioteca(){
+		$item = "id";
+		$valor = $this->idBiblioteca;
 
-    $item = "id";
-    $valor = $this->idBiblioteca;
+		$respuesta = ControladorBibliotecas::ctrMostrarBibliotecas($item, $valor);
 
-    $respuesta = ControladorBibliotecas::ctrMostrarBibliotecas($item, $valor);
-
-    echo json_encode($respuesta);
-
-  }
-
+		header('Content-Type: application/json; charset=utf-8');
+		echo json_encode($respuesta, JSON_UNESCAPED_UNICODE);
+	}
 }
-
-
-/*=============================================
-OBJETO EDITAR BIBLIOTECA
-=============================================*/ 
 
 if(isset($_POST["idBiblioteca"])){
 
-  $editarBiblioteca = new AjaxBibliotecas();
-  $editarBiblioteca -> idBiblioteca = $_POST["idBiblioteca"];
-  $editarBiblioteca -> ajaxEditarBiblioteca();
-
+	$editarBiblioteca = new AjaxBibliotecas();
+	$editarBiblioteca->idBiblioteca = $_POST["idBiblioteca"];
+	$editarBiblioteca->ajaxEditarBiblioteca();
 }
-
-

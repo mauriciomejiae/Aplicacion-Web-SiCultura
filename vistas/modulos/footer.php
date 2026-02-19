@@ -1,12 +1,12 @@
-<footer class="main-footer">
-
-	<div class="pull-right hidden-xs">
-
-		<b>Version</b> 1.0
-
-	</div>
-	
-	<strong><a href="documentacion">Copyright &copy; 2018. </a> Mauricio Mejia Estevez & Gustavo Adolfo Miranda Pinzón.</strong>
-
-	Todos los derechos reservados.
+<footer class="app-footer">
+    <div class="float-end d-none d-sm-inline">
+        <a href="https://github.com/mauriciomejiae/Aplicacion-Web-SiCultura" target="_blank" class="text-decoration-none">
+            <i class="fas fa-book"></i> Documentación
+        </a>
+    </div>
+    <strong>
+        Copyright &copy; 2026&nbsp;
+        <a href="https://github.com/mauriciomejiae/Aplicacion-Web-SiCultura" target="_blank" class="text-decoration-none">SiCultura</a>.
+    </strong>
+    Todos los derechos reservados. <b>v2.0</b>
 </footer>

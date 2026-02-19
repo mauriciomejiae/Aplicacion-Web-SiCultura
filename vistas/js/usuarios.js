@@ -13,10 +13,10 @@ $(".nuevaFoto").change(function(){
 
   		$(".nuevaFoto").val("");
 
-  		 swal({
+  		 Swal.fire({
 		      title: "Error al subir la imagen",
 		      text: "¡La imagen debe estar en formato JPG o PNG!",
-		      type: "error",
+		      icon: "error",
 		      confirmButtonText: "¡Cerrar!"
 		    });
 
@@ -24,10 +24,10 @@ $(".nuevaFoto").change(function(){
 
   		$(".nuevaFoto").val("");
 
-  		 swal({
+  		 Swal.fire({
 		      title: "Error al subir la imagen",
 		      text: "¡La imagen no debe pesar más de 2MB!",
-		      type: "error",
+		      icon: "error",
 		      confirmButtonText: "¡Cerrar!"
 		    });
 
@@ -111,9 +111,9 @@ $(document).on("click", ".btnActivar", function(){
       success: function(respuesta){
 
       	if (window.matchMedia("(max-width:767px)").matches){
-      		swal({
+      		Swal.fire({
       			title: "El usuario ha sido actualizado correctamente",
-      			type: "success",
+      			icon: "success",
       			confirmButtonText: "¡Cerrar!"
       		}).then(function(result){
 
@@ -192,10 +192,10 @@ $(document).on("click", ".btnEliminarUsuario", function(){
   var fotoUsuario = $(this).attr("fotoUsuario");
   var usuario = $(this).attr("usuario");
 
-  swal({
+  Swal.fire({
     title: '¿Está seguro de borrar el usuario?',
     text: "¡Si no lo está puede cancelar la accíón!",
-    type: 'warning',
+    icon: 'warning',
     showCancelButton: true,
     confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
